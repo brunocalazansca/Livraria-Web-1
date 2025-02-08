@@ -1,0 +1,65 @@
+nav {
+    height: 110px;
+}
+
+/* Ajuste da logo */
+.logo-navbar {
+    max-width: 70px;
+    height: auto;
+}
+
+/* Ajuste do botão hamburguer */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Melhorias no campo de busca */
+.search-container {
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.search-input {
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 100%;
+}
+
+.search-button {
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+/* Ícone do carrinho */
+.cart-icon {
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    nav {
+        height: auto;
+    }
+    .search-container {
+        max-width: 100%;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-icon {
+        margin-top: 10px;
+    }
+}
