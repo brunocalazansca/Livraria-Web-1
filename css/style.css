@@ -41,6 +41,10 @@ nav {
     margin-left: 15px;
 }
 
+.carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1); /* Deixa as setas pretas */
+    }
 /* Responsividade */
 @media (max-width: 1000px) {
     nav {
