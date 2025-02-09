@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>NaLista - Quem Somos</title>
+    <title>NaLista - Finalizar Compra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/style.css" />
     <link
@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <body onload="recuperarDados()">
+  <body onload="recuperarDados(); gerarListaFinalizar();">
     <header>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -151,7 +151,9 @@
                   id="carrinhoCompras"
                   class="dropdown-menu dropdown-menu-end"
                   style="min-width: 300px; max-height: 400px; overflow-y: auto"
-                ></ul>
+                >
+                  <!-- Conteúdo gerado via script -->
+                </ul>
               </li>
             </ul>
           </div>
@@ -159,28 +161,37 @@
       </nav>
     </header>
 
-    <main>
-      <section class="container mt-5">
-        <article class="bg-light p-5 rounded">
-          <h2>Quem Somos</h2>
-          <p>
-            Bem-vindo à <strong>NaLista</strong>, sua livraria online de
-            confiança. Fundada por obrigação em 2025, nossa missão é
-            proporcionar aos amantes de livros uma experiência de compra fácil e
-            agradável. Oferecemos uma vasta seleção de títulos em diversos
-            gêneros, desde ficção científica até romance, suspense e drama.
-            Nosso objetivo é conectar leitores com os livros que eles amam, tudo
-            no conforto de suas casas.
-          </p>
-          <p>
-            Na <strong>NaLista</strong>, acreditamos que a leitura é uma porta
-            para novos mundos e experiências. Estamos comprometidos em fornecer
-            um serviço de alta qualidade e uma seleção de livros que inspirem e
-            eduquem nossos clientes. Junte-se a nós nesta jornada literária e
-            descubra seu próximo livro favorito hoje mesmo!
-          </p>
-        </article>
-      </section>
+    <main class="mt-5">
+      <div class="container">
+        <h2 class="mb-4">Finalizar Compra</h2>
+        <div class="card">
+          <div class="card-body">
+            <!-- Lista de produtos gerada pelo script.js -->
+            <ul id="listaProdutos" class="list-group mb-3">
+              <!-- Conteúdo gerado em gerarListaFinalizar() -->
+            </ul>
+            <!-- Exibição do total -->
+            <div id="totalFinal" class="fw-bold mb-3">
+              <!-- Total é atualizado via script.js -->
+            </div>
+            <!-- Botões para cancelar ou seguir ao pagamento -->
+            <div class="d-flex justify-content-between">
+              <button
+                class="btn btn-danger"
+                onclick="limparCarrinho(); window.location.href = '../home.html';"
+              >
+                Cancelar Compra
+              </button>
+              <button
+                class="btn btn-success"
+                onclick="window.location.href = 'pagamento.html';"
+              >
+                Ir para Pagamento
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="bg-dark text-white mt-5 p-4 text-center">
@@ -223,7 +234,6 @@
         </div>
       </div>
     </footer>
-
     <script src="../js/script.js"></script>
   </body>
 </html>

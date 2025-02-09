@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Autores</title>
+    <title>NaLista - Autores</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body onload="recuperarDados()">
     <header>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
@@ -33,17 +33,32 @@
                                 Categorias
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="categorias.html?categoria=auto-ajuda#auto-ajuda">Auto ajuda</a></li>
-                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="categorias.html?categoria=auto-ajuda#auto-ajuda">Auto
+                                        ajuda</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <li><a class="dropdown-item" href="categorias.html?categoria=drama#drama">Drama</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="categorias.html?categoria=fantasia#fantasia">Fantasia</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="categorias.html?categoria=financas#financas">Finanças</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="categorias.html?categoria=romance#romance">Romance</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="categorias.html?categoria=suspense#suspense">Suspense</a></li>                                
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="categorias.html?categoria=fantasia#fantasia">Fantasia</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="categorias.html?categoria=financas#financas">Finanças</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="categorias.html?categoria=romance#romance">Romance</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="categorias.html?categoria=suspense#suspense">Suspense</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -62,13 +77,11 @@
                             <a class="nav-link dropdown-toggle cart-icon" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-cart3"></i>
+                                <span id="cartCount" class="badge bg-danger"
+                                    style="position:relative; top:-10px; left:-5px;">0</span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Ver Carrinho</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Finalizar Compra</a></li>
+                            <ul id="carrinhoCompras" class="dropdown-menu dropdown-menu-end"
+                                style="min-width:300px; max-height:400px; overflow-y:auto;">
                             </ul>
                         </li>
                     </ul>
@@ -77,111 +90,123 @@
         </nav>
     </header>
 
-    <section class="container mt-5">
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-4">
-                <img src="../images/autores/danbrown.jpg" alt="Autor 1" class="img-fluid rounded">
-            </div>
-            <div class="col-md-8">
-                <h3>Daniel Gerhard Brown</h3>
-                <p class="mt-5">Conhecido por suas obras que misturam ficção e realidade, o autor se tornou extremamente
-                    popular entre o final da década de 1990 e a começo da década de 2000. Nesse período o autor teve
-                    seus quatro primeiros livros, simultaneamente, na lista de mais vendidos do The New York Times.
-                    Seu pai era professor de matemática em um colégio interno particular, em que os professores moravam
-                    no campus. Com isso Brown e seus irmãos literalmente foram criados na escola.
-                    Nasceu em 22 de junho de 1964, há 60 anos.</p>
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-8">
-                <h3>Marcelo Rubens Beyrodt Paiva</h3>
-                <p>É um escritor, dramaturgo e jornalista brasileiro, amplamente reconhecido por sua obra literária. .
-                    Seu pai, o deputado federal Rubens Paiva, foi uma vítima da ditadura militar brasileira.
-                    Ganhou destaque no cenário nacional com o livro Feliz Ano Velho (1982), uma autobiografia que narra
-                    sua experiência de se tornar tetraplégico após um acidente, onde aborda temas como juventude,
-                    reabilitação, superação e reflexões sobre a vida. Nasceu em 1 de maio de 1959, em São Paulo</p>
-            </div>
-            <div class="col-md-4">
-                <img src="../images/autores/marcelo.jpg" alt="Autor 2" class="img-fluid rounded">
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-4">
-                <img src="../images/autores/holly.jpg" alt="Autor 1" class="img-fluid rounded">
-            </div>
-            <div class="col-md-8">
-                <h3>Holly Jackson</h3>
-                <p class="mt-5">É uma autora inglesa de romances para jovens adultos, cresceu em Buckinghamshire,
-                    Inglaterra e escreveu seu primeiro romance quando tinha 15 anos.
-                    Mais tarde, ela frequentou a Universidade de Nottingham, onde estudou linguística literária e
-                    escrita criativa, depois graduando-se com um mestrado em inglês.</p>
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-8">
-                <h3>Pauline Sara Jo Moyes</h3>
-                <p>mais conhecida como Jojo Moyes (Maidstone, 4 de agosto de 1969) é uma jornalista britânica e, desde
-                    2002, romancista. É uma das poucas autoras que já ganharam duas vezes o Prémio Romance do Ano
-                    atribuído pela Associação de Romancistas e foi traduzida para vinte e oito idiomas diferentes.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="../images/autores/jojo.jpg" alt="Autor 2" class="img-fluid rounded">
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-4">
-                <img src="../images/autores/matt.jpg" alt="Autor 1" class="img-fluid rounded">
-            </div>
-            <div class="col-md-8">
-                <h3>Matt Haig</h3>
-                <p class="mt-5">Matt Haig é um romancista e jornalista inglês. Ele escreveu livros de ficção e
-                    não-ficção para
-                    crianças e adultos, muitas vezes no gênero de ficção especulativa. É um autor best-seller
-                    internacional com livros publicados em mais de 30 idiomas.</p>
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-8">
-                <h3>George Orwell</h3>
-                <p>Eric Arthur Blair (Motihari, Índia Britânica, 25 de junho de 1903 – Camden, Londres, Reino
-                    Unido, 21 de janeiro de 1950), mais conhecido pelo pseudónimo George Orwell, foi um escritor,
-                    ensaísta político inglês, nascido na Índia Britânica. Sua obra é marcada por uma inteligência
-                    perspicaz e bem-amargurada, reflexo de uma consciência profunda das injustiças sociais, uma intensa
-                    oposição ao totalitarismo e uma paixão pela clareza da escrita. Sua hostilidade ao Stalinismo e
-                    pela experiência do socialismo soviético, um regime que Orwell denunciou em seu romance satírico
-                    A Revolução dos Bichos, (traduzido no Brasil também como A Fazenda dos Animais, a partir das
-                    edições de 2097) se revelou uma característica constante em sua obra.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="../images/autores/orwell.jpg" alt="Autor 2" class="img-fluid rounded">
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-4">
-                <img src="../images/autores/martin.jpg" alt="Autor 1" class="img-fluid rounded">
-            </div>
-            <div class="col-md-8">
-                <h3>George R. R. Martin</h3>
-                <p class="mt-5">George Raymond Richard Martin (Bayonne, 20 de setembro de 1948), nascido George Raymond
-                    Martin e mais conhecido como George R. R. Martin ou simplesmente GRRM, é um roteirista e escritor de
-                    ficção científica, terror e fantasia norte-americano. É mais conhecido por escrever a série de
-                    livros de fantasia épica As Crônicas de Gelo e Fogo.</p>
-            </div>
-        </article>
-        <article class="row mb-5 bg-light p-5 rounded">
-            <div class="col-md-8">
-                <h3>Delia Owens</h3>
-                <p>Delia Owens (nascida em 4 de abril de 1949) é uma autora, zoóloga e conservacionista
-                    americana . Ela é mais conhecida por seu romance de 2018, Where the Crawdads Sing.
-                    Owens nasceu e cresceu no sul da Geórgia, onde passou a maior parte de sua vida em ou perto de áreas
-                    selvagens. Ela recebeu um diploma de bacharel em zoologia pela Universidade da Geórgia e um
-                    doutorado em comportamento animal pela Universidade da Califórnia, Davis.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="../images/autores/delia.jpg" alt="Autor 2" class="img-fluid rounded">
-            </div>
-        </article>
-    </section>
+    <main>
+        <section class="container mt-5">
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-4">
+                    <img src="../images/autores/danbrown.jpg" alt="Autor 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <h3>Daniel Gerhard Brown</h3>
+                    <p class="mt-5">Conhecido por suas obras que misturam ficção e realidade, o autor se tornou
+                        extremamente
+                        popular entre o final da década de 1990 e a começo da década de 2000. Nesse período o autor teve
+                        seus quatro primeiros livros, simultaneamente, na lista de mais vendidos do The New York Times.
+                        Seu pai era professor de matemática em um colégio interno particular, em que os professores
+                        moravam
+                        no campus. Com isso Brown e seus irmãos literalmente foram criados na escola.
+                        Nasceu em 22 de junho de 1964, há 60 anos.</p>
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-8">
+                    <h3>Marcelo Rubens Beyrodt Paiva</h3>
+                    <p>É um escritor, dramaturgo e jornalista brasileiro, amplamente reconhecido por sua obra literária.
+                        .
+                        Seu pai, o deputado federal Rubens Paiva, foi uma vítima da ditadura militar brasileira.
+                        Ganhou destaque no cenário nacional com o livro Feliz Ano Velho (1982), uma autobiografia que
+                        narra
+                        sua experiência de se tornar tetraplégico após um acidente, onde aborda temas como juventude,
+                        reabilitação, superação e reflexões sobre a vida. Nasceu em 1 de maio de 1959, em São Paulo</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../images/autores/marcelo.jpg" alt="Autor 2" class="img-fluid rounded">
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-4">
+                    <img src="../images/autores/holly.jpg" alt="Autor 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <h3>Holly Jackson</h3>
+                    <p class="mt-5">É uma autora inglesa de romances para jovens adultos, cresceu em Buckinghamshire,
+                        Inglaterra e escreveu seu primeiro romance quando tinha 15 anos.
+                        Mais tarde, ela frequentou a Universidade de Nottingham, onde estudou linguística literária e
+                        escrita criativa, depois graduando-se com um mestrado em inglês.</p>
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-8">
+                    <h3>Pauline Sara Jo Moyes</h3>
+                    <p>mais conhecida como Jojo Moyes (Maidstone, 4 de agosto de 1969) é uma jornalista britânica e,
+                        desde
+                        2002, romancista. É uma das poucas autoras que já ganharam duas vezes o Prémio Romance do Ano
+                        atribuído pela Associação de Romancistas e foi traduzida para vinte e oito idiomas diferentes.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../images/autores/jojo.jpg" alt="Autor 2" class="img-fluid rounded">
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-4">
+                    <img src="../images/autores/matt.jpg" alt="Autor 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <h3>Matt Haig</h3>
+                    <p class="mt-5">Matt Haig é um romancista e jornalista inglês. Ele escreveu livros de ficção e
+                        não-ficção para
+                        crianças e adultos, muitas vezes no gênero de ficção especulativa. É um autor best-seller
+                        internacional com livros publicados em mais de 30 idiomas.</p>
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-8">
+                    <h3>George Orwell</h3>
+                    <p>Eric Arthur Blair (Motihari, Índia Britânica, 25 de junho de 1903 – Camden, Londres, Reino
+                        Unido, 21 de janeiro de 1950), mais conhecido pelo pseudónimo George Orwell, foi um escritor,
+                        ensaísta político inglês, nascido na Índia Britânica. Sua obra é marcada por uma inteligência
+                        perspicaz e bem-amargurada, reflexo de uma consciência profunda das injustiças sociais, uma
+                        intensa
+                        oposição ao totalitarismo e uma paixão pela clareza da escrita. Sua hostilidade ao Stalinismo e
+                        pela experiência do socialismo soviético, um regime que Orwell denunciou em seu romance satírico
+                        A Revolução dos Bichos, (traduzido no Brasil também como A Fazenda dos Animais, a partir das
+                        edições de 2097) se revelou uma característica constante em sua obra.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../images/autores/orwell.jpg" alt="Autor 2" class="img-fluid rounded">
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-4">
+                    <img src="../images/autores/martin.jpg" alt="Autor 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <h3>George R. R. Martin</h3>
+                    <p class="mt-5">George Raymond Richard Martin (Bayonne, 20 de setembro de 1948), nascido George
+                        Raymond
+                        Martin e mais conhecido como George R. R. Martin ou simplesmente GRRM, é um roteirista e
+                        escritor de
+                        ficção científica, terror e fantasia norte-americano. É mais conhecido por escrever a série de
+                        livros de fantasia épica As Crônicas de Gelo e Fogo.</p>
+                </div>
+            </article>
+            <article class="row mb-5 bg-light p-5 rounded">
+                <div class="col-md-8">
+                    <h3>Delia Owens</h></h3>
+                    <p>Delia Owens (nascida em 4 de abril de 1949) é uma autora, zoóloga e conservacionista
+                        americana . Ela é mais conhecida por seu romance de 2018, Where the Crawdads Sing.
+                        Owens nasceu e cresceu no sul da Geórgia, onde passou a maior parte de sua vida em ou perto de
+                        áreas
+                        selvagens. Ela recebeu um diploma de bacharel em zoologia pela Universidade da Geórgia e um
+                        doutorado em comportamento animal pela Universidade da Califórnia, Davis.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="../images/autores/delia.jpg" alt="Autor 2" class="img-fluid rounded">
+                </div>
+            </article>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white mt-5 p-4 text-center">
         <div class="container">
@@ -205,6 +230,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
