@@ -20,8 +20,9 @@
                 <a class="navbar-brand ms-3" href="home.html">
                     <img src="images/logo-navbar.png" alt="Logo" class="logo-navbar">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,13 +59,15 @@
                     </form>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle cart-icon" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle cart-icon" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-cart3"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#">Ver Carrinho</a></li>
-                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <li><a class="dropdown-item" href="#">Finalizar Compra</a></li>
                             </ul>
                         </li>
@@ -76,158 +79,219 @@
 
     <section class="mt-5">
         <div class="container">
-            <article class="row">
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="images/livros/suspense/manual-assassinato.jpg" class="mb-3">
-                    <p>Manual de assassinato para boas garotas</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 44,92</p>
+            <article id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+                <h2 id="mais-vendidos">Mais Vendidos</h2>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="book-card">
+                            <img src="images/livros/romance/o-codigo-da-vinco.jpg" class="img-fluid">
+                            <div class="book-info">
+                                <h5>O CÓDIGO DA VINCI</h5>
+                                <p>Dan Brown</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="book-card">
+                            <img src="images/livros/suspense/manual-assassinato.jpg" class="img-fluid">
+                            <div class="book-info">
+                                <h5>MANUAL DE ASSASINATO PARA BOAS GAROTAS</h5>
+                                <p>Holly Jackson</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="book-card">
+                            <img src="images//livros/fantasia/a-revolucao-dos-bichos.jpg" class="img-fluid">
+                            <div class="book-info">
+                                <h5>A REVOLUÇÃO DOS BICHOS</h5>
+                                <p>George Orwell</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="book-card">
+                            <img src="images//livros/fantasia/guerra-dos-tronos.jpg" class="img-fluid">
+                            <div class="book-info">
+                                <h5>A GUERRA DOS TRONOS: AS CRÓNICAS DE GELO E FOGO VOL. 1</h5>
+                                <p>George R. R. Martin</p>
+                                <div class="stars">★★★★★</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="images/livros/drama/biblioteca-da-meio-noite.jpg" class="mb-3">
-                    <p>A biblioteca da meia noite</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 47,52</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="images/livros/romance/antes-de-voce.jpg" class="mb-3">
-                    <p>Como eu era antes de você</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 29,00</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="row mt-5">
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="images/livros/fantasia/guerra-dos-tronos.jpg" class="mb-3">
-                    <p>A Guerra dos Tronos : As Crônicas de Gelo e Fogo, Vol. 1</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 70,00</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="images/livros/drama/ainda-estou-aqui.jpg" class="mb-3">
-                    <p>Ainda estou aqui</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 59,37</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="images/livros/romance/o-codigo-da-vinco.jpg" class="mb-3">
-                    <p>O código Da Vinci</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 53,12</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </article>
 
-            <article class="row mt-5">
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="../images/livros/autoajuda/a-morte.jpg" class="mb-3">
-                    <p>A morte é um dia que vale a pena viver</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 49,90</p>
+            <div class="mt-5">
+                <h2 class="p5">Livros</h2>
+                <article class="row bg-light p-5 rounded">
+                    <h2 class="mb-5">Lançamentos</h2>
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/suspense/manual-assassinato.jpg" class="mb-3 img-fluid">
+                        <p class="text-center">Manual de assassinato para boas garotas</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 44,92</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="../images/livros/fantasia/a-revolucao-dos-bichos.jpg" class="mb-3">
-                    <p>A revolução dos bichos</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 129,90</p>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/drama/biblioteca-da-meio-noite.jpg" class="mb-3 img-fluid">
+                        <p class="text-center">A biblioteca da meia noite</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 47,52</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="../images/livros/drama/extraordinario.jpg" class="mb-3">
-                    <p>Extraordinario</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 22,95</p>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/romance/antes-de-voce.jpg" class="mb-3 img-fluid">
+                        <p class="text-center">Como eu era antes de você</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 29,00</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
-        
-            <article class="row mt-5">
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="../images/livros/fantasia/onix.jpg" class="mb-3">
-                    <p>A tempestade de ônix</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 459,99</p>
+                </article>
+
+                <article class="row bg-light p-5 rounded">
+                    <h2 class="mb-5">Amantes da Fantasia e Romance</h2>
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/fantasia/guerra-dos-tronos.jpg" class="mb-3 img-fluid">
+                        <p>A Guerra dos Tronos : As Crônicas de Gelo e Fogo, Vol. 1</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 70,00</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="../images/livros/financas/psicologia-financeira.jpg" class="mb-3">
-                    <p>A psicologia financeira</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 1.099,99</p>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/fantasia/a-revolucao-dos-bichos.jpg" class="mb-3 img-fluid">
+                        <p>A revolução dos bichos</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 59,37</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        
-                <div class="col-md-4 d-flex flex-column align-items-center">
-                    <img src="../images/livros/drama/um-lugar-bem-longe-daqui.jpg" class="mb-3">
-                    <p>Um lugar bem longe daqui</p>
-                    <div class="d-flex justify-content-between align-items-center w-100" style="max-width: 300px;">
-                        <button class="btn btn-outline-success me-3">Comprar</button>
-                        <div class="d-flex align-items-center">
-                            <h5 class="mb-0 me-2">Preço:</h5>
-                            <p class="mb-0">R$ 9,90</p>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/romance/o-codigo-da-vinco.jpg" class="mb-3 img-fluid">
+                        <p>O código Da Vinci</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 53,12</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
-        </div>        
+                </article>
+
+                <article class="row bg-light p-5 rounded">
+                    <h2 class="mb-5">Drama</h2>
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/drama/um-lugar-bem-longe-daqui.jpg" class="mb-3 img-fluid">
+                        <p>Um lugar bem longe daqui</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 49,90</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/drama/ainda-estou-aqui.jpg" class="mb-3 img-fluid">
+                        <p>Ainda estou aqui</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 129,90</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/drama/extraordinario.jpg" class="mb-3 img-fluid">
+                        <p>Extraordinario</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 22,95</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row bg-light p-5 rounded">
+                    <h2 class="mb-5">Autoajuda</h2>
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/fantasia/onix.jpg" class="mb-3 img-fluid">
+                        <p>A tempestade de ônix</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 459,99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/financas/psicologia-financeira.jpg" class="mb-3 img-fluid">
+                        <p>A psicologia financeira</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 1.099,99</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center mb-4">
+                        <img src="images/livros/autoajuda/a-morte.jpg" class="mb-3 img-fluid">
+                        <p>A morte é um dia que vale a pena viver</p>
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <button class="btn btn-outline-success me-3">Comprar</button>
+                            <div class="d-flex align-items-center">
+                                <h5 class="mb-0 me-2">Preço:</h5>
+                                <p class="mb-0">R$ 9,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
     <footer class="bg-dark text-white mt-5 p-4 text-center">
