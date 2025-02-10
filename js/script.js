@@ -226,7 +226,7 @@ function confirmarCompra () {
     return true;
 }
 
-function validarCartao() {
+function validarCompra() {
     let opcaoCartao = document.getElementById("cartao").checked;
 
     if (opcaoCartao) {
@@ -242,11 +242,31 @@ function validarCartao() {
         }
 
         if (!valido) {
-            alert("Preencha todos os campos obrigatórios do cartão.");
+            let incompleto = document.getElementById("mensagemCompra");
+            incompleto.innerText = "Preencha todos os campos do cartão.";
+            incompleto.style.color = "red";
+            
             return false;
         }
+    } else {
+        contadorTempo();
     }
+    contadorTempo();
+}
 
-    alert("Pagamento confirmado!");
-    confirmarCompra();
+function contadorTempo() {
+    let tempo = 10;
+    let mensagem = document.getElementById("mensagemCompra");
+
+    const intervalo = setInterval(() => {
+        if (tempo <= 0) {
+            clearInterval(intervalo);
+            confirmarCompra();
+            return;
+        }
+
+        mensagem.innerText = `Compra realizada com sucesso. Você será redirecionado em: ${tempo} s`;
+        mensagem.style.color = "green";
+        tempo--;
+    }, 1000);
 }
