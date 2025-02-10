@@ -270,3 +270,27 @@ function contadorTempo() {
         tempo--;
     }, 1000);
 }
+
+function formatarCpf(campo) {
+    let cpf = campo.value.replace(/\D/g, "");
+    cpf = cpf.replace(/^(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+    cpf = cpf.replace(/\.(\d{3})(\d)/, ".$1-$2");
+    campo.value = cpf.substring(0, 14);
+}
+
+function formatarCartao(campo) {
+    let cartao = campo.value.replace(/\D/g, "");
+    cartao = cartao.replace(/(\d{4})/g, "$1 ").trim();
+    campo.value = cartao.substring(0, 19);
+}
+
+function formatarValidade(campo) {
+    let validade = campo.value.replace(/\D/g, "");
+    validade = validade.replace(/^(\d{2})(\d)/, "$1/$2");
+    campo.value = validade.substring(0, 5);
+}
+
+function formatarCvv(campo) {
+    campo.value = campo.value.replace(/\D/g, "").substring(0, 3);
+}

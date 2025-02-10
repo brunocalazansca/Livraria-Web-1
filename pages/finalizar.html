@@ -145,24 +145,24 @@
                       <h5>Dados do Cartão</h5>
                       <div class="mb-3">
                         <label for="nomeTitular" class="form-label">Nome do Titular</label>
-                        <input type="text" class="form-control" id="nomeTitular" placeholder="Nome conforme escrito no cartão">
+                        <input type="text" class="form-control" id="nomeTitular" placeholder="Nome conforme escrito no cartão" required>
                       </div>
                       <div class="mb-3">
                         <label for="cpfTitular" class="form-label">CPF do Titular</label>
-                        <input type="number" class="form-control" id="cpfTitular" placeholder="000.000.000-00" maxlength="14">
+                        <input type="text" class="form-control" id="cpfTitular" placeholder="000.000.000-00" maxlength="14" required oninput="formatarCpf(this)">
                       </div>
                       <div class="mb-3">
                         <label for="numeroCartao" class="form-label">Número do Cartão</label>
-                        <input type="number" class="form-control" id="numeroCartao" placeholder="0000 0000 0000 0000" maxlength="19">
+                        <input type="text" class="form-control" id="numeroCartao" placeholder="0000 0000 0000 0000" maxlength="19" required oninput="formatarCartao(this)">
                       </div>
                       <div class="row">
                         <div class="col-md-6">
                           <label for="validadeCartao" class="form-label">Validade</label>
-                          <input type="number" class="form-control" id="validadeCartao" placeholder="MM/AA" maxlength="">
+                          <input type="text" class="form-control" id="validadeCartao" placeholder="MM/AA" maxlength="5" required oninput="formatarValidade(this)">
                         </div>
                         <div class="col-md-6">
                           <label for="cvv" class="form-label">CVV</label>
-                          <input type="number" class="form-control" id="cvv" placeholder="123" maxlength="3">
+                          <input type="text" class="form-control" id="cvv" placeholder="123" maxlength="3" required oninput="formatarCvv(this)">
                         </div>
                       </div>
                       <div class="mt-3">
