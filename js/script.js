@@ -246,10 +246,8 @@ function validarCompra() {
             incompleto.innerText = "Preencha todos os campos do cartão.";
             incompleto.style.color = "red";
             
-            return false;
+            return;
         }
-    } else {
-        contadorTempo();
     }
     contadorTempo();
 }
