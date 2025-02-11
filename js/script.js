@@ -1,3 +1,46 @@
+function trocarTema() {
+    var body = document.getElementById("body");
+    var botao = document.getElementById("butaotema");
+    var nav = document.getElementById("navbar");
+
+    if (body.classList.contains("bg-secondary")) {
+        nav.className = "navbar navbar-expand-lg bg-dark navbar-dark";
+        botao.className = "bi bi-brightness-high";
+        body.className = "bg-light";
+
+        // Salva a escolha do tema no localStorage
+        localStorage.setItem("tema", "claro");
+    } else {
+        nav.className = "navbar navbar-expand-lg bg-warning navbar-dark";
+        botao.className = "bi bi-moon-fill";
+        body.className = "bg-secondary";
+
+        // Salva a escolha do tema no localStorage
+        localStorage.setItem("tema", "escuro");
+    }
+}
+
+// Função para aplicar o tema salvo ao carregar a página
+function carregarTema() {
+    var body = document.getElementById("body");
+    var botao = document.getElementById("butaotema");
+    var nav = document.getElementById("navbar");
+
+    // Obtém o tema salvo
+    var temaSalvo = localStorage.getItem("tema");
+
+    // Aplica o tema salvo
+    if (temaSalvo === "escuro") {
+        nav.className = "navbar navbar-expand-lg bg-warning navbar-dark";
+        botao.className = "bi bi-moon-fill";
+        body.className = "bg-secondary";
+    } else {
+        nav.className = "navbar navbar-expand-lg bg-dark navbar-dark";
+        botao.className = "bi bi-brightness-high";
+        body.className = "bg-light";
+    }
+}
+
 const carrinhoDeCompras = [];
 
 function salvarDados() {
@@ -13,7 +56,6 @@ function recuperarDados() {
     preencherCarrinho();
 }
 
-// Função para obter os itens do carrinho a partir do localStorage
 function getCarrinho() {
     return JSON.parse(localStorage.getItem('carrinho')) || [];
 }
